@@ -10,10 +10,10 @@ class WunderlistMessage
     /** @var string */
     protected $title;
 
-    /** @var boolean */
+    /** @var bool */
     protected $completed;
 
-    /** @var boolean */
+    /** @var bool */
     protected $starred;
 
     /** @var string */
@@ -106,7 +106,7 @@ class WunderlistMessage
     {
         $allowedRecurrenceTypes = [self::RECURRENCE_TYPE_DAY, self::RECURRENCE_TYPE_WEEK, self::RECURRENCE_TYPE_MONTH, self::RECURRENCE_TYPE_YEAR];
 
-        if (! in_array($recurrenceType, $allowedRecurrenceTypes) ){
+        if (! in_array($recurrenceType, $allowedRecurrenceTypes)) {
             throw CouldNotCreateMessage::invalidRecurrenceType($recurrenceType);
         }
 

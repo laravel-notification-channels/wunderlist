@@ -55,12 +55,12 @@ class WunderlistChannel
         $wunderlistParameters = $notification->toWunderlist($notifiable)->toArray();
 
         $response = $this->client->post(self::API_ENDPOINT, [
-            'body' => json_encode(Arr::set($wunderlistParameters, 'list_id', (int)$routing->get('list_id'))),
+            'body' => json_encode(Arr::set($wunderlistParameters, 'list_id', (int) $routing->get('list_id'))),
             'headers' => [
                 'X-Client-ID' => $key,
                 'X-Access-Token' => $routing->get('token'),
                 'Content-Type' => 'application/json',
-            ]
+            ],
         ]);
 
         if ($response->getStatusCode() !== 200) {

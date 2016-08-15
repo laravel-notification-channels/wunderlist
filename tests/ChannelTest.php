@@ -30,7 +30,7 @@ class ChannelTest extends TestCase
                         'X-Client-ID' => 'WunderlistKey',
                         'X-Access-Token' => 'NotifiableToken',
                         'Content-Type' => 'application/json',
-                    ]
+                    ],
                 ])
             ->andReturn($response);
         $channel = new WunderlistChannel($client);

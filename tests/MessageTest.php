@@ -110,7 +110,7 @@ class MessageTest extends \PHPUnit_Framework_TestCase
             [WunderlistMessage::RECURRENCE_TYPE_DAY, 'day'],
             [WunderlistMessage::RECURRENCE_TYPE_WEEK, 'week'],
             [WunderlistMessage::RECURRENCE_TYPE_MONTH, 'month'],
-            [WunderlistMessage::RECURRENCE_TYPE_YEAR, 'year']
+            [WunderlistMessage::RECURRENCE_TYPE_YEAR, 'year'],
         ];
     }
 

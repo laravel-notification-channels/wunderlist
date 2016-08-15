@@ -89,36 +89,29 @@ class MessageTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(false, Arr::get($this->message->toArray(), 'completed'));
     }
 
-    /** @test */
-    public function it_can_set_a_daily_recurrence_type()
+    /**
+     * @test
+     *
+     * @dataProvider recurrenceProvider
+     *
+     * @param string $type
+     * @param string $stringRepresentation
+     */
+    public function it_can_set_a_recurrence_type($type, $stringRepresentation)
     {
-        $this->message->recurrenceType(WunderlistMessage::RECURRENCE_TYPE_DAY);
+        $this->message->recurrenceType($type);
 
-        $this->assertEquals('day', Arr::get($this->message->toArray(), 'recurrence_type'));
+        $this->assertEquals($stringRepresentation, Arr::get($this->message->toArray(), 'recurrence_type'));
     }
 
-    /** @test */
-    public function it_can_set_a_weekly_recurrence_type()
+    public function recurrenceProvider()
     {
-        $this->message->recurrenceType(WunderlistMessage::RECURRENCE_TYPE_WEEK);
-
-        $this->assertEquals('week', Arr::get($this->message->toArray(), 'recurrence_type'));
-    }
-
-    /** @test */
-    public function it_can_set_a_monthly_recurrence_type()
-    {
-        $this->message->recurrenceType(WunderlistMessage::RECURRENCE_TYPE_MONTH);
-
-        $this->assertEquals('month', Arr::get($this->message->toArray(), 'recurrence_type'));
-    }
-
-    /** @test */
-    public function it_can_set_a_yearly_recurrence_type()
-    {
-        $this->message->recurrenceType(WunderlistMessage::RECURRENCE_TYPE_YEAR);
-
-        $this->assertEquals('year', Arr::get($this->message->toArray(), 'recurrence_type'));
+        return [
+            [WunderlistMessage::RECURRENCE_TYPE_DAY, 'day'],
+            [WunderlistMessage::RECURRENCE_TYPE_WEEK, 'week'],
+            [WunderlistMessage::RECURRENCE_TYPE_MONTH, 'month'],
+            [WunderlistMessage::RECURRENCE_TYPE_YEAR, 'year']
+        ];
     }
 
     /** @test */

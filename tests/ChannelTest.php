@@ -50,8 +50,6 @@ class ChannelTest extends TestCase
     /** @test */
     public function it_throws_an_exception_when_it_could_not_send_the_notification()
     {
-        $this->setExpectedException(CouldNotSendNotification::class);
-
         $this->app['config']->set('services.wunderlist.key', 'WunderlistKey');
 
         $response = new Response(500);
@@ -60,6 +58,9 @@ class ChannelTest extends TestCase
             ->once()
             ->andReturn($response);
         $channel = new WunderlistChannel($client);
+
+        $this->setExpectedException(CouldNotSendNotification::class);
+
         $channel->send(new TestNotifiable(), new TestNotification());
     }
 }

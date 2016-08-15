@@ -104,7 +104,12 @@ class WunderlistMessage
      */
     public function recurrenceType($recurrenceType)
     {
-        $allowedRecurrenceTypes = [self::RECURRENCE_TYPE_DAY, self::RECURRENCE_TYPE_WEEK, self::RECURRENCE_TYPE_MONTH, self::RECURRENCE_TYPE_YEAR];
+        $allowedRecurrenceTypes = [
+            self::RECURRENCE_TYPE_DAY,
+            self::RECURRENCE_TYPE_WEEK,
+            self::RECURRENCE_TYPE_MONTH,
+            self::RECURRENCE_TYPE_YEAR,
+        ];
 
         if (! in_array($recurrenceType, $allowedRecurrenceTypes)) {
             throw CouldNotCreateMessage::invalidRecurrenceType($recurrenceType);

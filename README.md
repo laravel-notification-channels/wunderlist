@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/wunderlist.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/wunderlist)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/laravel-notification-channels/wunderlist/master.svg?style=flat-square)](https://travis-ci.org/laravel-notification-channels/wunderlist)
-[![StyleCI](https://styleci.io/repos/65379321/shield)](https://styleci.io/repos/65379321)
+[![StyleCI](https://styleci.io/repos/65743131/shield)](https://styleci.io/repos/65743131)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/9015691f-130d-4fca-8710-72a010abc684.svg?style=flat-square)](https://insight.sensiolabs.com/projects/9015691f-130d-4fca-8710-72a010abc684)
 [![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/wunderlist.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/wunderlist)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/wunderlist.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/wunderlist)

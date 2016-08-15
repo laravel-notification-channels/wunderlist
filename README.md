@@ -88,7 +88,13 @@ public function routeNotificationForWunderlist()
 
 ### Available methods
 
-TODO
+- `title('')`: Accepts a string value for the Wunderlist ticket title.
+- `assigneeId('')`: Accepts a string value for the Wunderlist assignee id.
+- `recurrenceCount('')`: Accepts an integer value for the ticket recurrence count.
+- `recurrenceType('')`: Accepts one of these values for the recurrence type: `WunderlistMessage::RECURRENCE_TYPE_DAY`, `WunderlistMessage::RECURRENCE_TYPE_WEEK`, `WunderlistMessage::RECURRENCE_TYPE_MONTH`,`WunderlistMessage::RECURRENCE_TYPE_YEAR`  
+- `starred()`: Marks the Wunderlist ticket as starred.
+- `completed()`: Marks the Wunderlist ticket as completed.
+- `due('')`: Accepts a string or DateTime object for the Wunderlist ticket due date.
 
 
 ## Changelog

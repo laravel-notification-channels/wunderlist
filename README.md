@@ -65,10 +65,8 @@ class ProjectCreated extends Notification
 
     public function toWunderlist($notifiable)
     {
-        return WunderlistMessage::create()
-            ->name("Wunderlist Ticket Name")
-            ->description("This is the Wunderlist ticket description")
-            ->top()
+        return WunderlistMessage::create('Another channel bites the dust')
+            ->starred()
             ->due('tomorrow');
     }
 }
@@ -90,12 +88,7 @@ public function routeNotificationForWunderlist()
 
 ### Available methods
 
-- `name('')`: Accepts a string value for the Wunderlist ticket name.
-- `description('')`: Accepts a string value for the Wunderlist ticket description.
-- `top()`: Moves the Wunderlist ticket to the top.
-- `bottom()`: Moves the Wunderlist ticket to the bottom.
-- `position('')`: Accepts an integer for a specific Wunderlist ticket position.
-- `due('')`: Accepts a string or DateTime object for the Wunderlist ticket due date.
+TODO
 
 
 ## Changelog

@@ -40,12 +40,10 @@ Add your Wunderlist Client-ID to your `config/services.php`:
 
 ```php
 // config/services.php
-
-    'wunderlist' => [
-        'key' => env('WUNDERLIST_API_KEY'),
-    ]
+'wunderlist' => [
+    'key' => env('WUNDERLIST_API_KEY'),
+]
 ```
-
 
 ## Usage
 
@@ -72,7 +70,7 @@ class ProjectCreated extends Notification
 }
 ```
 
-In order to let your Notification know which Wunderlist user and Wunderlist list you are targeting, add the `routeNotificationForWunderlist` method to your Notifiable model.
+In order to let your notification know which Wunderlist user and Wunderlist list you are targeting, add the `routeNotificationForWunderlist` method to your Notifiable model.
 
 This method needs to return an array containing the access token of the authorized Wunderlist user and the list ID of the Wunderlist list to add the ticket to.
 

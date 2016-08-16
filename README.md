@@ -6,6 +6,7 @@
 [![StyleCI](https://styleci.io/repos/65743131/shield)](https://styleci.io/repos/65743131)
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/11716c52-99b4-412b-b68c-b78e0f18f844.svg?style=flat-square)](https://insight.sensiolabs.com/projects/11716c52-99b4-412b-b68c-b78e0f18f844)
 [![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/wunderlist.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/wunderlist)
+[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/laravel-notification-channels/wunderlist/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/wunderlist/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/wunderlist.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/wunderlist)
 
 This package makes it easy to create [Wunderlist tasks](https://developers.wunderlist.com/) with Laravel 5.3.

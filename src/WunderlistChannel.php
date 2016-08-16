@@ -5,8 +5,6 @@ namespace NotificationChannels\Wunderlist;
 use GuzzleHttp\Client;
 use Illuminate\Support\Arr;
 use NotificationChannels\Wunderlist\Exceptions\CouldNotSendNotification;
-use NotificationChannels\Wunderlist\Events\MessageWasSent;
-use NotificationChannels\Wunderlist\Events\SendingMessage;
 use Illuminate\Notifications\Notification;
 use NotificationChannels\Wunderlist\Exceptions\InvalidConfiguration;
 
@@ -46,12 +44,6 @@ class WunderlistChannel
             throw InvalidConfiguration::configurationNotSet();
         }
 
-        $shouldSendMessage = event(new SendingMessage($notifiable, $notification), [], true) !== false;
-
-        if (! $shouldSendMessage) {
-            return;
-        }
-
         $wunderlistParameters = $notification->toWunderlist($notifiable)->toArray();
 
         $response = $this->client->post(self::API_ENDPOINT, [
@@ -66,7 +58,5 @@ class WunderlistChannel
         if ($response->getStatusCode() !== 200) {
             throw CouldNotSendNotification::serviceRespondedWithAnError($response);
         }
-
-        event(new MessageWasSent($notifiable, $notification));
     }
 }

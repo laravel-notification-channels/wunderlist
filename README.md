@@ -41,9 +41,11 @@ Add your Wunderlist Client-ID to your `config/services.php`:
 
 ```php
 // config/services.php
+...
 'wunderlist' => [
     'key' => env('WUNDERLIST_API_KEY'),
-]
+],
+...
 ```
 
 ## Usage

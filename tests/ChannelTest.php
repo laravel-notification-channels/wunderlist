@@ -19,7 +19,7 @@ class ChannelTest extends TestCase
     {
         $this->app['config']->set('services.wunderlist.key', 'WunderlistKey');
 
-        $response = new Response(200);
+        $response = new Response(201);
         $client = Mockery::mock(Client::class);
         $client->shouldReceive('post')
             ->once()

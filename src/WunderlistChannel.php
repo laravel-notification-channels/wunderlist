@@ -55,7 +55,7 @@ class WunderlistChannel
             ],
         ]);
 
-        if ($response->getStatusCode() !== 200) {
+        if ($response->getStatusCode() !== 201) {
             throw CouldNotSendNotification::serviceRespondedWithAnError($response);
         }
     }

@@ -34,7 +34,9 @@ class WunderlistChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        if (! $routing = collect($notifiable->routeNotificationFor('Wunderlist'))) {
+        $routing = collect($notifiable->routeNotificationFor('Wunderlist'));
+
+        if (! Arr::has($routing, ['token', 'list_id'])) {
             return;
         }
 

@@ -104,6 +104,22 @@ class MessageTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($stringRepresentation, Arr::get($this->message->toArray(), 'recurrence_type'));
     }
 
+    /** @test */
+    public function it_can_set_the_assigneeId()
+    {
+        $this->message->assigneeId(12345);
+
+        $this->assertEquals(12345, Arr::get($this->message->toArray(), 'assignee_id'));
+    }
+
+    /** @test */
+    public function it_can_set_the_recurrenceCount()
+    {
+        $this->message->recurrenceCount(5);
+
+        $this->assertEquals(5, Arr::get($this->message->toArray(), 'recurrence_count'));
+    }
+
     public function recurrenceProvider()
     {
         return [
